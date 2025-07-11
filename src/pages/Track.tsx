@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -276,7 +275,7 @@ const Track = () => {
                 DON002 (In Transit)
               </Badge>
             </div>
-          </div>
+          </Card>
         )}
       </div>
     </div>
