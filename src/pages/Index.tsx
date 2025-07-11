@@ -21,12 +21,12 @@ const Index = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/donate">
-                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3">
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 font-semibold shadow-lg">
                   Start Donating Today
                 </Button>
               </Link>
               <Link to="/how-it-works">
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3">
+                <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 border-2 border-white hover:border-gray-200 px-8 py-3 font-semibold shadow-lg">
                   How It Works
                 </Button>
               </Link>
@@ -132,7 +132,7 @@ const Index = () => {
             Your unused items can become someone's treasure. Start your journey of giving today.
           </p>
           <Link to="/donate">
-            <Button size="lg" className="bg-white text-orange-500 hover:bg-gray-100 px-8 py-3">
+            <Button size="lg" className="bg-white text-orange-500 hover:bg-gray-100 px-8 py-3 font-semibold shadow-lg">
               Donate Now
             </Button>
           </Link>

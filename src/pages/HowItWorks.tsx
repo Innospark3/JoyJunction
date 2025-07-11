@@ -1,5 +1,5 @@
 
-import { ArrowRight, User, Package, Truck, MapPin, Camera, Heart } from "lucide-react";
+import { ArrowDown, User, Package, Truck, MapPin, Camera, Heart } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -56,33 +56,25 @@ const HowItWorks = () => {
         </div>
 
         {/* Steps */}
-        <div className="space-y-8 mb-16">
+        <div className="max-w-4xl mx-auto">
           {steps.map((step, index) => (
-            <div key={index} className="flex flex-col lg:flex-row items-center gap-8">
-              <div className="flex-shrink-0">
-                <Card className="p-8 w-80 hover-scale transition-all duration-300">
-                  <div className={`w-16 h-16 rounded-full ${step.color} flex items-center justify-center mx-auto mb-4`}>
-                    <step.icon className="h-8 w-8" />
-                  </div>
-                  <div className="text-center">
-                    <div className="text-sm font-semibold text-gray-500 mb-2">STEP {index + 1}</div>
-                    <h3 className="text-xl font-bold mb-3">{step.title}</h3>
-                    <p className="text-gray-600">{step.description}</p>
-                  </div>
-                </Card>
-              </div>
+            <div key={index} className="flex flex-col items-center mb-8">
+              <Card className="p-8 w-full max-w-md hover-scale transition-all duration-300 mb-4">
+                <div className={`w-16 h-16 rounded-full ${step.color} flex items-center justify-center mx-auto mb-4`}>
+                  <step.icon className="h-8 w-8" />
+                </div>
+                <div className="text-center">
+                  <div className="text-sm font-semibold text-gray-500 mb-2">STEP {index + 1}</div>
+                  <h3 className="text-xl font-bold mb-3">{step.title}</h3>
+                  <p className="text-gray-600">{step.description}</p>
+                </div>
+              </Card>
               
               {index < steps.length - 1 && (
-                <div className="flex-shrink-0 hidden lg:block">
-                  <ArrowRight className="h-8 w-8 text-gray-400" />
+                <div className="flex justify-center mb-4">
+                  <ArrowDown className="h-8 w-8 text-gray-400" />
                 </div>
               )}
-              
-              <div className="lg:hidden">
-                {index < steps.length - 1 && (
-                  <ArrowRight className="h-8 w-8 text-gray-400 rotate-90" />
-                )}
-              </div>
             </div>
           ))}
         </div>
