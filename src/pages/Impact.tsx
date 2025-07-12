@@ -1,4 +1,3 @@
-
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Heart, Users, Gift, MapPin, Star, Quote } from "lucide-react";
@@ -17,7 +16,7 @@ const Impact = () => {
       name: "Priya Sharma",
       role: "Donor",
       image: "👩‍💼",
-      content: "Gift of Hope made donating so easy! I donated my daughter's outgrown clothes and toys, and seeing the photos of children enjoying them brought tears of joy to my eyes. The tracking system is amazing!",
+      content: "JoyJunction made donating so easy! I donated my daughter's outgrown clothes and toys, and seeing the photos of children enjoying them brought tears of joy to my eyes. The tracking system is amazing!",
       rating: 5,
     },
     {
@@ -31,14 +30,14 @@ const Impact = () => {
       name: "Sister Mary",
       role: "Sunshine Orphanage",
       image: "👩‍🏫",
-      content: "Gift of Hope has been a blessing for our children. The quality of donations and the care with which they're delivered shows the love behind each gift. Our children have never been happier!",
+      content: "JoyJunction has been a blessing for our children. The quality of donations and the care with which they're delivered shows the love behind each gift. Our children have never been happier!",
       rating: 5,
     },
     {
       name: "Ankit Patel",
       role: "Donor",
       image: "👨‍💻",
-      content: "I was skeptical about online donation platforms, but Gift of Hope's transparency changed my mind. Being able to track where my items went and see their impact has made me a regular donor.",
+      content: "I was skeptical about online donation platforms, but JoyJunction's transparency changed my mind. Being able to track where my items went and see their impact has made me a regular donor.",
       rating: 5,
     },
   ];
@@ -204,24 +203,24 @@ const Impact = () => {
           </div>
         </Card>
 
-        {/* Regional Impact */}
+        {/* Regional Impact - Fixed to always show text */}
         <Card className="p-8 mb-16">
           <h2 className="text-2xl font-bold mb-6">Impact Across India</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
+            <div className="text-center p-4 bg-blue-50 rounded-lg">
               <div className="text-3xl font-bold text-blue-600 mb-2">North India</div>
-              <div className="text-gray-600 mb-2">Delhi, Punjab, Haryana</div>
-              <div className="text-sm">5,200 children helped</div>
+              <div className="text-gray-700 mb-2 font-medium">Delhi, Punjab, Haryana</div>
+              <div className="text-sm text-gray-600 font-semibold">5,200 children helped</div>
             </div>
-            <div className="text-center">
+            <div className="text-center p-4 bg-green-50 rounded-lg">
               <div className="text-3xl font-bold text-green-600 mb-2">West India</div>
-              <div className="text-gray-600 mb-2">Mumbai, Pune, Ahmedabad</div>
-              <div className="text-sm">6,800 children helped</div>
+              <div className="text-gray-700 mb-2 font-medium">Mumbai, Pune, Ahmedabad</div>
+              <div className="text-sm text-gray-600 font-semibold">6,800 children helped</div>
             </div>
-            <div className="text-center">
+            <div className="text-center p-4 bg-orange-50 rounded-lg">
               <div className="text-3xl font-bold text-orange-600 mb-2">South India</div>
-              <div className="text-gray-600 mb-2">Bangalore, Chennai, Hyderabad</div>
-              <div className="text-sm">3,847 children helped</div>
+              <div className="text-gray-700 mb-2 font-medium">Bangalore, Chennai, Hyderabad</div>
+              <div className="text-sm text-gray-600 font-semibold">3,847 children helped</div>
             </div>
           </div>
         </Card>

@@ -12,7 +12,14 @@ const Index = () => {
         <div className="absolute inset-0 bg-black opacity-20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in">
-            <Heart className="h-16 w-16 mx-auto mb-6 text-yellow-300" />
+            <div className="flex items-center justify-center mb-6">
+              <img 
+                src="/lovable-uploads/4adcd29f-8cfb-4b18-be0b-bacdc0c78f5c.png" 
+                alt="JoyJunction Logo" 
+                className="h-20 w-20 mr-4 object-contain"
+              />
+              <Heart className="h-16 w-16 text-yellow-300" />
+            </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Donate Love. Deliver Hope.
             </h1>
