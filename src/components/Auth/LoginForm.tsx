@@ -38,7 +38,7 @@ export const LoginForm = ({ onSwitchToRegister }: LoginFormProps) => {
         <div className="text-center mb-8">
           <Heart className="h-12 w-12 mx-auto mb-4 text-orange-500" />
           <h1 className="text-2xl font-bold text-gray-900">Welcome Back</h1>
-          <p className="text-gray-600">Sign in to Gift of Hope</p>
+          <p className="text-gray-600">Sign into JoyJunction</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
