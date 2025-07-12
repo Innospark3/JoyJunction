@@ -46,7 +46,7 @@ export const Navbar = () => {
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="flex items-center space-x-3" onClick={() => handleNavigation("/")}>
+          <Link to="/" className="flex items-center space-x-4 mr-8" onClick={() => handleNavigation("/")}>
             <img 
               src="/lovable-uploads/73cb4187-0169-4334-9da4-980a06779f1f.png" 
               alt="JoyJunction Logo" 
@@ -56,12 +56,12 @@ export const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-6">
+          <div className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => handleNavigation(item.path)}
-                className={`px-3 py-2 text-sm font-medium transition-colors leading-tight text-center max-w-[120px] ${
+                className={`px-4 py-2 text-sm font-medium transition-colors leading-tight text-center max-w-[140px] ${
                   isActive(item.path)
                     ? "text-orange-500 border-b-2 border-orange-500"
                     : "text-gray-700 hover:text-orange-500"
@@ -72,7 +72,7 @@ export const Navbar = () => {
             ))}
             
             {user && (
-              <div className="flex items-center space-x-4 ml-6">
+              <div className="flex items-center space-x-4 ml-8 pl-8 border-l border-gray-200">
                 <span className="text-sm text-gray-600">
                   {user.email} {user.isAdmin && "(Admin)"}
                 </span>
@@ -90,12 +90,12 @@ export const Navbar = () => {
           </div>
 
           {/* Medium screens navigation */}
-          <div className="hidden md:flex lg:hidden items-center space-x-3">
+          <div className="hidden md:flex lg:hidden items-center space-x-4">
             {navItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => handleNavigation(item.path)}
-                className={`px-2 py-2 text-xs font-medium transition-colors leading-tight text-center max-w-[90px] ${
+                className={`px-3 py-2 text-xs font-medium transition-colors leading-tight text-center max-w-[100px] ${
                   isActive(item.path)
                     ? "text-orange-500 border-b-2 border-orange-500"
                     : "text-gray-700 hover:text-orange-500"
@@ -106,7 +106,7 @@ export const Navbar = () => {
             ))}
             
             {user && (
-              <div className="flex items-center space-x-2 ml-3">
+              <div className="flex items-center space-x-2 ml-4 pl-4 border-l border-gray-200">
                 <Button
                   onClick={handleLogout}
                   variant="outline"
@@ -138,7 +138,7 @@ export const Navbar = () => {
                 <button
                   key={item.name}
                   onClick={() => handleNavigation(item.path)}
-                  className={`px-3 py-2 text-sm font-medium transition-colors text-left ${
+                  className={`px-3 py-3 text-sm font-medium transition-colors text-left ${
                     isActive(item.path)
                       ? "text-orange-500 bg-orange-50"
                       : "text-gray-700 hover:text-orange-500 hover:bg-gray-50"
