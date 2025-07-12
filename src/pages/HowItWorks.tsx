@@ -2,9 +2,19 @@
 import { ArrowDown, User, Package, Truck, MapPin, Camera, Heart } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const HowItWorks = () => {
+  const navigate = useNavigate();
+
+  const handleNavigation = (path: string) => {
+    navigate(path);
+    // Scroll to top after navigation
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
+  };
+
   const steps = [
     {
       icon: User,
@@ -49,7 +59,7 @@ const HowItWorks = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">How Gift of Hope Works</h1>
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">How JoyJunction Works</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Our simple 6-step process makes donating easy, transparent, and impactful. From your doorstep to a child's smile.
           </p>
@@ -81,7 +91,7 @@ const HowItWorks = () => {
 
         {/* Features */}
         <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">Why Choose Gift of Hope?</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">Why Choose JoyJunction?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -132,16 +142,21 @@ const HowItWorks = () => {
             Join thousands of donors making a difference in children's lives.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/donate">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 px-8 py-3">
-                Start Donating
-              </Button>
-            </Link>
-            <Link to="/partner">
-              <Button size="lg" variant="outline" className="px-8 py-3">
-                Become a Partner
-              </Button>
-            </Link>
+            <Button 
+              size="lg" 
+              className="bg-blue-600 hover:bg-blue-700 px-8 py-3"
+              onClick={() => handleNavigation("/donate")}
+            >
+              Start Donating
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="px-8 py-3"
+              onClick={() => handleNavigation("/partner")}
+            >
+              Become a Partner
+            </Button>
           </div>
         </div>
       </div>

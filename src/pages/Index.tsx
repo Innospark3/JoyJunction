@@ -2,9 +2,19 @@
 import { Heart, Users, Gift, Truck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Index = () => {
+  const navigate = useNavigate();
+
+  const handleNavigation = (path: string) => {
+    navigate(path);
+    // Scroll to top after navigation
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
+  };
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -14,7 +24,7 @@ const Index = () => {
           <div className="animate-fade-in">
             <div className="flex items-center justify-center mb-6">
               <img 
-                src="/lovable-uploads/4adcd29f-8cfb-4b18-be0b-bacdc0c78f5c.png" 
+                src="/lovable-uploads/73cb4187-0169-4334-9da4-980a06779f1f.png" 
                 alt="JoyJunction Logo" 
                 className="h-20 w-20 mr-4 object-contain"
               />
@@ -27,16 +37,20 @@ const Index = () => {
               Connect your generous heart with children in need. Your toys, clothes, books, and stationery can brighten a child's world.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/donate">
-                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 font-semibold shadow-lg">
-                  Start Donating Today
-                </Button>
-              </Link>
-              <Link to="/how-it-works">
-                <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 border-2 border-white hover:border-gray-200 px-8 py-3 font-semibold shadow-lg">
-                  How It Works
-                </Button>
-              </Link>
+              <Button 
+                size="lg" 
+                className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 font-semibold shadow-lg"
+                onClick={() => handleNavigation("/donate")}
+              >
+                Start Donating Today
+              </Button>
+              <Button 
+                size="lg" 
+                className="bg-white text-blue-600 hover:bg-gray-100 border-2 border-white hover:border-gray-200 px-8 py-3 font-semibold shadow-lg"
+                onClick={() => handleNavigation("/how-it-works")}
+              >
+                How It Works
+              </Button>
             </div>
           </div>
         </div>
@@ -138,11 +152,13 @@ const Index = () => {
           <p className="text-xl mb-8">
             Your unused items can become someone's treasure. Start your journey of giving today.
           </p>
-          <Link to="/donate">
-            <Button size="lg" className="bg-white text-orange-500 hover:bg-gray-100 px-8 py-3 font-semibold shadow-lg">
-              Donate Now
-            </Button>
-          </Link>
+          <Button 
+            size="lg" 
+            className="bg-white text-orange-500 hover:bg-gray-100 px-8 py-3 font-semibold shadow-lg"
+            onClick={() => handleNavigation("/donate")}
+          >
+            Donate Now
+          </Button>
         </div>
       </section>
     </div>
