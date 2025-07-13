@@ -82,19 +82,19 @@ const Contact = () => {
       answer: "We currently operate in major cities across India including Delhi, Mumbai, Bangalore, Chennai, Pune, and Hyderabad. We're constantly expanding our network to reach more communities."
     },
     {
-      question: "How can my organization partner with Gift of Hope?",
-      answer: "Organizations can partner with us as donation centers, pickup points, or distribution partners. Contact us through this form or email partnerships@giftofhope.org for more information about partnership opportunities."
+      question: "How can my organization partner with JoyJunction?",
+      answer: "Organizations can partner with us as donation centers, pickup points, or distribution partners. Contact us through this form or email partnerships@joyjunction.org for more information about partnership opportunities."
     }
   ];
 
   return (
-    <div className="min-h-screen py-12">
+    <div className="min-h-screen py-12 bg-gradient-to-br from-lime/10 via-background to-bubblegum/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12">
-          <MessageSquare className="h-16 w-16 text-blue-500 mx-auto mb-4" />
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
-          <p className="text-xl text-gray-600">
+        <div className="text-center mb-12 bg-turquoise/5 rounded-3xl p-8 border border-turquoise/20">
+          <MessageSquare className="h-16 w-16 text-turquoise mx-auto mb-4" />
+          <h1 className="text-4xl font-bold text-foreground mb-4">Contact Us</h1>
+          <p className="text-xl text-muted-foreground">
             Have questions? We're here to help! Reach out to us and we'll get back to you as soon as possible.
           </p>
         </div>
@@ -102,33 +102,33 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Contact Information */}
           <div className="lg:col-span-1">
-            <Card className="p-8 h-fit">
-              <h2 className="text-2xl font-bold mb-6">Get in Touch</h2>
+            <Card className="p-8 h-fit bg-gradient-to-br from-purple/5 to-tangerine/5 border-purple/20">
+              <h2 className="text-2xl font-bold mb-6 text-purple">Get in Touch</h2>
               
               <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <Mail className="h-6 w-6 text-blue-500 mt-1" />
+                <div className="flex items-start gap-4 p-4 rounded-lg bg-white/50">
+                  <Mail className="h-6 w-6 text-turquoise mt-1" />
                   <div>
                     <h3 className="font-semibold mb-1">Email</h3>
-                    <p className="text-gray-600">hello@giftofhope.org</p>
-                    <p className="text-gray-600">support@giftofhope.org</p>
+                    <p className="text-muted-foreground">hello@joyjunction.org</p>
+                    <p className="text-muted-foreground">support@joyjunction.org</p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <Phone className="h-6 w-6 text-green-500 mt-1" />
+                <div className="flex items-start gap-4 p-4 rounded-lg bg-white/50">
+                  <Phone className="h-6 w-6 text-lime mt-1" />
                   <div>
                     <h3 className="font-semibold mb-1">Phone</h3>
-                    <p className="text-gray-600">xxx</p>
-                    <p className="text-gray-600">xxx</p>
+                    <p className="text-muted-foreground">xxx</p>
+                    <p className="text-muted-foreground">xxx</p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <MapPin className="h-6 w-6 text-red-500 mt-1" />
+                <div className="flex items-start gap-4 p-4 rounded-lg bg-white/50">
+                  <MapPin className="h-6 w-6 text-bubblegum mt-1" />
                   <div>
                     <h3 className="font-semibold mb-1">Address</h3>
-                    <p className="text-gray-600">
+                    <p className="text-muted-foreground">
                       123 Hope Street<br />
                       Mumbai, Maharashtra 400001<br />
                       India
@@ -136,11 +136,11 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <Clock className="h-6 w-6 text-purple-500 mt-1" />
+                <div className="flex items-start gap-4 p-4 rounded-lg bg-white/50">
+                  <Clock className="h-6 w-6 text-tangerine mt-1" />
                   <div>
                     <h3 className="font-semibold mb-1">Office Hours</h3>
-                    <p className="text-gray-600">
+                    <p className="text-muted-foreground">
                       Mon - Fri: 9:00 AM - 6:00 PM<br />
                       Saturday: 10:00 AM - 4:00 PM<br />
                       Sunday: Closed
@@ -150,10 +150,10 @@ const Contact = () => {
               </div>
 
               {/* Sponsor Section */}
-              <div className="mt-8 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg">
-                <h3 className="font-semibold mb-2 text-center">Supported by</h3>
+              <div className="mt-8 p-4 bg-gradient-to-r from-lime/20 to-turquoise/20 rounded-lg border border-turquoise/30">
+                <h3 className="font-semibold mb-2 text-center text-turquoise">Supported by</h3>
                 <div className="text-center">
-                  <span className="bg-white px-3 py-1 rounded-full text-sm font-medium text-blue-600">
+                  <span className="bg-white px-3 py-1 rounded-full text-sm font-medium text-turquoise border border-turquoise/30">
                     Community Connect Network
                   </span>
                 </div>
@@ -163,8 +163,8 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="lg:col-span-2">
-            <Card className="p-8">
-              <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
+            <Card className="p-8 bg-gradient-to-br from-bubblegum/5 to-lime/5 border-bubblegum/20">
+              <h2 className="text-2xl font-bold mb-6 text-bubblegum">Send us a Message</h2>
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -175,7 +175,7 @@ const Contact = () => {
                       value={formData.name}
                       onChange={(e) => handleInputChange("name", e.target.value)}
                       required
-                      className="mt-1"
+                      className="mt-1 border-bubblegum/30 focus:border-bubblegum"
                     />
                   </div>
                   <div>
@@ -186,7 +186,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={(e) => handleInputChange("email", e.target.value)}
                       required
-                      className="mt-1"
+                      className="mt-1 border-bubblegum/30 focus:border-bubblegum"
                     />
                   </div>
                 </div>
@@ -199,13 +199,13 @@ const Contact = () => {
                       type="tel"
                       value={formData.phone}
                       onChange={(e) => handleInputChange("phone", e.target.value)}
-                      className="mt-1"
+                      className="mt-1 border-bubblegum/30 focus:border-bubblegum"
                     />
                   </div>
                   <div>
                     <Label htmlFor="category">Category *</Label>
                     <Select value={formData.category} onValueChange={(value) => handleInputChange("category", value)}>
-                      <SelectTrigger className="mt-1">
+                      <SelectTrigger className="mt-1 border-bubblegum/30 focus:border-bubblegum">
                         <SelectValue placeholder="Select category" />
                       </SelectTrigger>
                       <SelectContent>
@@ -227,7 +227,7 @@ const Contact = () => {
                     value={formData.subject}
                     onChange={(e) => handleInputChange("subject", e.target.value)}
                     required
-                    className="mt-1"
+                    className="mt-1 border-bubblegum/30 focus:border-bubblegum"
                   />
                 </div>
 
@@ -239,12 +239,12 @@ const Contact = () => {
                     value={formData.message}
                     onChange={(e) => handleInputChange("message", e.target.value)}
                     required
-                    className="mt-1"
+                    className="mt-1 border-bubblegum/30 focus:border-bubblegum"
                     rows={6}
                   />
                 </div>
 
-                <Button type="submit" size="lg" className="w-full bg-blue-600 hover:bg-blue-700">
+                <Button type="submit" size="lg" className="w-full">
                   Send Message
                 </Button>
               </form>
@@ -254,20 +254,20 @@ const Contact = () => {
 
         {/* FAQ Section */}
         <div className="mt-16">
-          <div className="text-center mb-12">
-            <HelpCircle className="h-12 w-12 text-orange-500 mx-auto mb-4" />
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-            <p className="text-xl text-gray-600">
-              Find quick answers to common questions about Gift of Hope.
+          <div className="text-center mb-12 bg-tangerine/5 rounded-3xl p-8 border border-tangerine/20">
+            <HelpCircle className="h-12 w-12 text-tangerine mx-auto mb-4" />
+            <h2 className="text-3xl font-bold text-foreground mb-4">Frequently Asked Questions</h2>
+            <p className="text-xl text-muted-foreground">
+              Find quick answers to common questions about JoyJunction.
             </p>
           </div>
 
-          <Card className="p-8">
+          <Card className="p-8 bg-gradient-to-br from-purple/5 to-turquoise/5 border-purple/20">
             <Accordion type="single" collapsible className="w-full">
               {faqs.map((faq, index) => (
-                <AccordionItem key={index} value={`item-${index}`}>
-                  <AccordionTrigger className="text-left">{faq.question}</AccordionTrigger>
-                  <AccordionContent className="text-gray-600">
+                <AccordionItem key={index} value={`item-${index}`} className="border-purple/20">
+                  <AccordionTrigger className="text-left hover:text-purple">{faq.question}</AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -278,19 +278,19 @@ const Contact = () => {
 
         {/* Additional Support */}
         <div className="mt-12 text-center">
-          <Card className="p-8 bg-gradient-to-r from-green-50 to-blue-50">
-            <h3 className="text-xl font-bold mb-4">Need Immediate Help?</h3>
-            <p className="text-gray-600 mb-6">
+          <Card className="p-8 bg-gradient-to-r from-lime/10 to-turquoise/10 border-lime/20">
+            <h3 className="text-xl font-bold mb-4 text-turquoise">Need Immediate Help?</h3>
+            <p className="text-muted-foreground mb-6">
               For urgent donation pickups or time-sensitive issues, please call our emergency helpline.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-green-600 hover:bg-green-700">
+              <Button className="bg-lime hover:bg-lime/80 text-foreground">
                 <Phone className="h-4 w-4 mr-2" />
                 Emergency Helpline: xxx
               </Button>
-              <Button variant="outline">
+              <Button variant="outline" className="border-turquoise/50 text-turquoise hover:bg-turquoise hover:text-white">
                 <Mail className="h-4 w-4 mr-2" />
-                urgent@giftofhope.org
+                urgent@joyjunction.org
               </Button>
             </div>
           </Card>
