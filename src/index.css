@@ -9,83 +9,90 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 35 25% 97%;
-    --foreground: 25 15% 20%;
+    --background: 0 0% 98%; /* #FAFAFA */
+    --foreground: 0 0% 15%;
 
-    --card: 40 30% 95%;
-    --card-foreground: 25 15% 20%;
+    --card: 0 0% 95%; /* #F2F2F2 */
+    --card-foreground: 0 0% 15%;
 
-    --popover: 35 25% 97%;
-    --popover-foreground: 25 15% 20%;
+    --popover: 0 0% 98%;
+    --popover-foreground: 0 0% 15%;
 
-    --primary: 174 72% 56%;
+    --primary: 189 100% 42%; /* Turquoise Blue #00B8D9 */
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 35 20% 90%;
-    --secondary-foreground: 25 15% 25%;
+    --secondary: 152 81% 86%; /* Lime Green #A4F9C8 */
+    --secondary-foreground: 0 0% 20%;
 
-    --muted: 38 25% 92%;
-    --muted-foreground: 30 10% 45%;
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 180 65% 85%;
-    --accent-foreground: 25 15% 25%;
+    --accent: 344 85% 71%; /* Bubblegum Pink #FF6F91 */
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 35 20% 88%;
-    --input: 35 20% 88%;
-    --ring: 174 72% 56%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 189 100% 42%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 38 25% 96%;
-    --sidebar-foreground: 25 15% 25%;
-    --sidebar-primary: 174 72% 56%;
+    /* Custom theme colors */
+    --tangerine: 33 100% 56%; /* #FF9F1C */
+    --bubblegum: 344 85% 71%; /* #FF6F91 */
+    --turquoise: 189 100% 42%; /* #00B8D9 */
+    --lime: 152 81% 86%; /* #A4F9C8 */
+    --purple: 276 70% 58%; /* #9D4EDD */
+
+    --sidebar-background: 0 0% 95%;
+    --sidebar-foreground: 0 0% 20%;
+    --sidebar-primary: 189 100% 42%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 35 20% 90%;
-    --sidebar-accent-foreground: 25 15% 25%;
-    --sidebar-border: 35 20% 88%;
-    --sidebar-ring: 174 72% 56%;
+    --sidebar-accent: 0 0% 90%;
+    --sidebar-accent-foreground: 0 0% 20%;
+    --sidebar-border: 0 0% 90%;
+    --sidebar-ring: 189 100% 42%;
   }
 
   .dark {
-    --background: 25 15% 8%;
-    --foreground: 35 25% 95%;
+    --background: 0 0% 8%;
+    --foreground: 0 0% 95%;
 
-    --card: 25 15% 10%;
-    --card-foreground: 35 25% 95%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 25 15% 8%;
-    --popover-foreground: 35 25% 95%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 174 72% 56%;
-    --primary-foreground: 25 15% 8%;
+    --primary: 189 100% 42%;
+    --primary-foreground: 0 0% 8%;
 
-    --secondary: 30 10% 15%;
-    --secondary-foreground: 35 25% 90%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 90%;
 
-    --muted: 30 10% 15%;
-    --muted-foreground: 35 15% 65%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 180 40% 25%;
-    --accent-foreground: 35 25% 90%;
+    --accent: 344 85% 71%;
+    --accent-foreground: 0 0% 90%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 30 10% 18%;
-    --input: 30 10% 18%;
-    --ring: 174 72% 56%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 189 100% 42%;
     
-    --sidebar-background: 25 15% 10%;
-    --sidebar-foreground: 35 25% 90%;
-    --sidebar-primary: 174 72% 56%;
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 189 100% 42%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 30 10% 15%;
-    --sidebar-accent-foreground: 35 25% 90%;
-    --sidebar-border: 30 10% 18%;
-    --sidebar-ring: 174 72% 56%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 189 100% 42%;
   }
 }
 
@@ -96,5 +103,48 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Custom utility classes for theme colors */
+@layer utilities {
+  .bg-tangerine {
+    background-color: hsl(var(--tangerine));
+  }
+  .bg-bubblegum {
+    background-color: hsl(var(--bubblegum));
+  }
+  .bg-turquoise {
+    background-color: hsl(var(--turquoise));
+  }
+  .bg-lime {
+    background-color: hsl(var(--lime));
+  }
+  .bg-purple {
+    background-color: hsl(var(--purple));
+  }
+  .text-tangerine {
+    color: hsl(var(--tangerine));
+  }
+  .text-bubblegum {
+    color: hsl(var(--bubblegum));
+  }
+  .text-turquoise {
+    color: hsl(var(--turquoise));
+  }
+  .text-lime {
+    color: hsl(var(--lime));
+  }
+  .text-purple {
+    color: hsl(var(--purple));
+  }
+  .border-tangerine {
+    border-color: hsl(var(--tangerine));
+  }
+  .border-turquoise {
+    border-color: hsl(var(--turquoise));
+  }
+  .border-purple {
+    border-color: hsl(var(--purple));
   }
 }
