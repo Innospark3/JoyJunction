@@ -12,10 +12,10 @@ All colors MUST be HSL.
     --background: 0 0% 98%; /* #FAFAFA */
     --foreground: 0 0% 15%;
 
-    --card: 0 0% 100%; /* Pure white for better contrast */
+    --card: 0 0% 95%; /* #F2F2F2 */
     --card-foreground: 0 0% 15%;
 
-    --popover: 0 0% 100%;
+    --popover: 0 0% 98%;
     --popover-foreground: 0 0% 15%;
 
     --primary: 189 100% 42%; /* Turquoise Blue #00B8D9 */
@@ -24,7 +24,7 @@ All colors MUST be HSL.
     --secondary: 152 81% 86%; /* Lime Green #A4F9C8 */
     --secondary-foreground: 0 0% 20%;
 
-    --muted: 0 0% 96%;
+    --muted: 0 0% 95%;
     --muted-foreground: 0 0% 45%;
 
     --accent: 344 85% 71%; /* Bubblegum Pink #FF6F91 */
@@ -34,7 +34,7 @@ All colors MUST be HSL.
     --destructive-foreground: 210 40% 98%;
 
     --border: 0 0% 90%;
-    --input: 0 0% 92%;
+    --input: 0 0% 90%;
     --ring: 189 100% 42%;
 
     --radius: 0.5rem;
@@ -46,11 +46,11 @@ All colors MUST be HSL.
     --lime: 152 81% 86%; /* #A4F9C8 */
     --purple: 276 70% 58%; /* #9D4EDD */
 
-    --sidebar-background: 0 0% 100%;
+    --sidebar-background: 0 0% 95%;
     --sidebar-foreground: 0 0% 20%;
     --sidebar-primary: 189 100% 42%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 0 0% 96%;
+    --sidebar-accent: 0 0% 90%;
     --sidebar-accent-foreground: 0 0% 20%;
     --sidebar-border: 0 0% 90%;
     --sidebar-ring: 189 100% 42%;
@@ -103,38 +103,6 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    background-attachment: fixed;
-  }
-
-  /* Enhanced background patterns */
-  .bg-pattern-dots {
-    background-image: radial-gradient(circle, hsl(var(--lime) / 0.3) 1px, transparent 1px);
-    background-size: 20px 20px;
-  }
-
-  .bg-pattern-grid {
-    background-image: 
-      linear-gradient(to right, hsl(var(--turquoise) / 0.1) 1px, transparent 1px),
-      linear-gradient(to bottom, hsl(var(--turquoise) / 0.1) 1px, transparent 1px);
-    background-size: 40px 40px;
-  }
-
-  /* Animated gradient backgrounds */
-  .bg-animated-gradient {
-    background: linear-gradient(-45deg, 
-      hsl(var(--lime) / 0.15), 
-      hsl(var(--turquoise) / 0.1), 
-      hsl(var(--bubblegum) / 0.08), 
-      hsl(var(--tangerine) / 0.1)
-    );
-    background-size: 400% 400%;
-    animation: gradientShift 15s ease infinite;
-  }
-
-  @keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
   }
 }
 
@@ -178,22 +146,5 @@ All colors MUST be HSL.
   }
   .border-purple {
     border-color: hsl(var(--purple));
-  }
-
-  /* Section background utilities */
-  .section-bg-primary {
-    background: linear-gradient(135deg, hsl(var(--lime) / 0.15) 0%, hsl(var(--turquoise) / 0.08) 100%);
-  }
-  
-  .section-bg-secondary {
-    background: linear-gradient(135deg, hsl(var(--bubblegum) / 0.12) 0%, hsl(var(--purple) / 0.08) 100%);
-  }
-  
-  .section-bg-accent {
-    background: linear-gradient(135deg, hsl(var(--tangerine) / 0.1) 0%, hsl(var(--lime) / 0.15) 100%);
-  }
-
-  .section-bg-soft {
-    background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--muted) / 0.5) 100%);
   }
 }
