@@ -27,7 +27,7 @@ const AppContent = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-orange-50">
+    <div className="min-h-screen bg-gradient-to-br from-background via-muted/30 to-accent/20">
       <Navbar />
       <Routes>
         <Route path="/" element={<Index />} />

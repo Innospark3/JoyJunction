@@ -43,7 +43,7 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50">
+    <nav className="bg-card/80 backdrop-blur-sm shadow-lg sticky top-0 z-50 border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center space-x-4 mr-8" onClick={() => handleNavigation("/")}>
@@ -52,7 +52,7 @@ export const Navbar = () => {
               alt="JoyJunction Logo" 
               className="h-10 w-10 object-contain"
             />
-            <span className="text-xl font-bold text-gray-900">JoyJunction</span>
+            <span className="text-xl font-bold text-foreground">JoyJunction</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -61,10 +61,10 @@ export const Navbar = () => {
               <button
                 key={item.name}
                 onClick={() => handleNavigation(item.path)}
-                className={`px-4 py-2 text-sm font-medium transition-colors leading-tight text-center max-w-[140px] ${
+                className={`px-4 py-2 text-sm font-medium transition-colors leading-tight text-center max-w-[140px] rounded-md ${
                   isActive(item.path)
-                    ? "text-orange-500 border-b-2 border-orange-500"
-                    : "text-gray-700 hover:text-orange-500"
+                    ? "text-primary bg-primary/10 border-b-2 border-primary"
+                    : "text-foreground hover:text-primary hover:bg-accent/50"
                 }`}
               >
                 {item.name}
@@ -72,15 +72,15 @@ export const Navbar = () => {
             ))}
             
             {user && (
-              <div className="flex items-center space-x-4 ml-8 pl-8 border-l border-gray-200">
-                <span className="text-sm text-gray-600">
+              <div className="flex items-center space-x-4 ml-8 pl-8 border-l border-border">
+                <span className="text-sm text-muted-foreground">
                   {user.email} {user.isAdmin && "(Admin)"}
                 </span>
                 <Button
                   onClick={handleLogout}
                   variant="outline"
                   size="sm"
-                  className="flex items-center space-x-1"
+                  className="flex items-center space-x-1 border-primary/30 hover:bg-primary/10"
                 >
                   <LogOut className="h-4 w-4" />
                   <span>Logout</span>
@@ -95,10 +95,10 @@ export const Navbar = () => {
               <button
                 key={item.name}
                 onClick={() => handleNavigation(item.path)}
-                className={`px-3 py-2 text-xs font-medium transition-colors leading-tight text-center max-w-[100px] ${
+                className={`px-3 py-2 text-xs font-medium transition-colors leading-tight text-center max-w-[100px] rounded-md ${
                   isActive(item.path)
-                    ? "text-orange-500 border-b-2 border-orange-500"
-                    : "text-gray-700 hover:text-orange-500"
+                    ? "text-primary bg-primary/10 border-b-2 border-primary"
+                    : "text-foreground hover:text-primary hover:bg-accent/50"
                 }`}
               >
                 <span className="block">{item.name}</span>
@@ -106,12 +106,12 @@ export const Navbar = () => {
             ))}
             
             {user && (
-              <div className="flex items-center space-x-2 ml-4 pl-4 border-l border-gray-200">
+              <div className="flex items-center space-x-2 ml-4 pl-4 border-l border-border">
                 <Button
                   onClick={handleLogout}
                   variant="outline"
                   size="sm"
-                  className="flex items-center space-x-1"
+                  className="flex items-center space-x-1 border-primary/30 hover:bg-primary/10"
                 >
                   <LogOut className="h-4 w-4" />
                 </Button>
@@ -123,7 +123,7 @@ export const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-orange-500 focus:outline-none"
+              className="text-foreground hover:text-primary focus:outline-none"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -138,10 +138,10 @@ export const Navbar = () => {
                 <button
                   key={item.name}
                   onClick={() => handleNavigation(item.path)}
-                  className={`px-3 py-3 text-sm font-medium transition-colors text-left ${
+                  className={`px-3 py-3 text-sm font-medium transition-colors text-left rounded-md ${
                     isActive(item.path)
-                      ? "text-orange-500 bg-orange-50"
-                      : "text-gray-700 hover:text-orange-500 hover:bg-gray-50"
+                      ? "text-primary bg-primary/10"
+                      : "text-foreground hover:text-primary hover:bg-accent/50"
                   }`}
                 >
                   {item.name}
@@ -149,13 +149,13 @@ export const Navbar = () => {
               ))}
               
               {user && (
-                <div className="border-t pt-4 mt-4">
-                  <div className="px-3 py-2 text-sm text-gray-600">
+                <div className="border-t border-border pt-4 mt-4">
+                  <div className="px-3 py-2 text-sm text-muted-foreground">
                     {user.email} {user.isAdmin && "(Admin)"}
                   </div>
                   <button
                     onClick={handleLogout}
-                    className="w-full text-left px-3 py-2 text-sm font-medium text-gray-700 hover:text-orange-500 hover:bg-gray-50 flex items-center space-x-2"
+                    className="w-full text-left px-3 py-2 text-sm font-medium text-foreground hover:text-primary hover:bg-accent/50 flex items-center space-x-2 rounded-md"
                   >
                     <LogOut className="h-4 w-4" />
                     <span>Logout</span>
