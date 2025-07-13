@@ -119,8 +119,8 @@ const Contact = () => {
                   <Phone className="h-6 w-6 text-green-500 mt-1" />
                   <div>
                     <h3 className="font-semibold mb-1">Phone</h3>
-                    <p className="text-gray-600">+91 98765 43210</p>
-                    <p className="text-gray-600">+91 87654 32109</p>
+                    <p className="text-gray-600">xxx</p>
+                    <p className="text-gray-600">xxx</p>
                   </div>
                 </div>
 
@@ -286,7 +286,7 @@ const Contact = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="bg-green-600 hover:bg-green-700">
                 <Phone className="h-4 w-4 mr-2" />
-                Emergency Helpline: +91 90000 12345
+                Emergency Helpline: xxx
               </Button>
               <Button variant="outline">
                 <Mail className="h-4 w-4 mr-2" />
