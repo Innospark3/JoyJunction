@@ -43,7 +43,7 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="bg-card/90 backdrop-blur-sm shadow-lg sticky top-0 z-50 border-b border-turquoise">
+    <nav className="bg-card/95 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-turquoise/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo and Brand with increased spacing */}
@@ -62,10 +62,10 @@ export const Navbar = () => {
               <button
                 key={item.name}
                 onClick={() => handleNavigation(item.path)}
-                className={`px-4 py-3 text-sm font-medium transition-colors leading-tight text-center max-w-[120px] rounded-lg min-h-[48px] flex items-center justify-center ${
+                className={`px-4 py-3 text-sm font-medium transition-all duration-200 leading-tight text-center max-w-[120px] rounded-lg min-h-[48px] flex items-center justify-center ${
                   isActive(item.path)
-                    ? "text-white bg-turquoise shadow-md"
-                    : "text-foreground hover:text-turquoise hover:bg-lime/30 hover:shadow-sm"
+                    ? "text-white bg-gradient-to-r from-turquoise to-turquoise/90 shadow-lg transform scale-105"
+                    : "text-foreground hover:text-turquoise hover:bg-gradient-to-r hover:from-lime/30 hover:to-turquoise/20 hover:shadow-md hover:scale-102"
                 }`}
                 style={{
                   lineHeight: "1.2",
@@ -88,7 +88,7 @@ export const Navbar = () => {
                   onClick={handleLogout}
                   variant="outline"
                   size="sm"
-                  className="flex items-center space-x-1 border-turquoise/50 text-turquoise hover:bg-turquoise hover:text-white"
+                  className="flex items-center space-x-1 border-turquoise/50 text-turquoise hover:bg-turquoise hover:text-white transition-all duration-200"
                 >
                   <LogOut className="h-4 w-4" />
                   <span>Logout</span>
@@ -103,10 +103,10 @@ export const Navbar = () => {
               <button
                 key={item.name}
                 onClick={() => handleNavigation(item.path)}
-                className={`px-3 py-2 text-xs font-medium transition-colors leading-tight text-center max-w-[90px] rounded-md min-h-[40px] flex items-center justify-center ${
+                className={`px-3 py-2 text-xs font-medium transition-all duration-200 leading-tight text-center max-w-[90px] rounded-md min-h-[40px] flex items-center justify-center ${
                   isActive(item.path)
-                    ? "text-white bg-turquoise"
-                    : "text-foreground hover:text-turquoise hover:bg-lime/30"
+                    ? "text-white bg-gradient-to-r from-turquoise to-turquoise/90 shadow-md"
+                    : "text-foreground hover:text-turquoise hover:bg-gradient-to-r hover:from-lime/30 hover:to-turquoise/20"
                 }`}
                 style={{
                   lineHeight: "1.1",
@@ -137,7 +137,7 @@ export const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-turquoise hover:text-purple focus:outline-none"
+              className="text-turquoise hover:text-purple focus:outline-none transition-colors duration-200"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -152,10 +152,10 @@ export const Navbar = () => {
                 <button
                   key={item.name}
                   onClick={() => handleNavigation(item.path)}
-                  className={`px-4 py-3 text-sm font-medium transition-colors text-left rounded-lg ${
+                  className={`px-4 py-3 text-sm font-medium transition-all duration-200 text-left rounded-lg ${
                     isActive(item.path)
-                      ? "text-white bg-turquoise"
-                      : "text-foreground hover:text-turquoise hover:bg-lime/30"
+                      ? "text-white bg-gradient-to-r from-turquoise to-turquoise/90"
+                      : "text-foreground hover:text-turquoise hover:bg-gradient-to-r hover:from-lime/30 hover:to-turquoise/20"
                   }`}
                 >
                   {item.name}
@@ -169,7 +169,7 @@ export const Navbar = () => {
                   </div>
                   <button
                     onClick={handleLogout}
-                    className="w-full text-left px-4 py-3 text-sm font-medium text-foreground hover:text-turquoise hover:bg-lime/30 flex items-center space-x-2 rounded-lg"
+                    className="w-full text-left px-4 py-3 text-sm font-medium text-foreground hover:text-turquoise hover:bg-gradient-to-r hover:from-lime/30 hover:to-turquoise/20 flex items-center space-x-2 rounded-lg transition-all duration-200"
                   >
                     <LogOut className="h-4 w-4" />
                     <span>Logout</span>
