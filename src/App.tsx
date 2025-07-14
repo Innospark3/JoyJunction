@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider, useAuth } from "@/contexts/AuthContext";
 import { AuthScreen } from "@/components/Auth/AuthScreen";
 import { AllDonations } from "@/components/Admin/AllDonations";
+import { FloatingElements } from "@/components/FloatingElements";
 import { Navbar } from "./components/Navbar";
 import Index from "./pages/Index";
 import HowItWorks from "./pages/HowItWorks";
@@ -27,7 +28,8 @@ const AppContent = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-lime/5 to-bubblegum/5">
+    <div className="min-h-screen bg-gradient-to-br from-background via-lime/5 to-bubblegum/5 bg-decorated">
+      <FloatingElements />
       <Navbar />
       <Routes>
         <Route path="/" element={<Index />} />

@@ -148,3 +148,126 @@ All colors MUST be HSL.
     border-color: hsl(var(--purple));
   }
 }
+
+/* Floating Animation Keyframes */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(-1deg);
+  }
+  75% {
+    transform: translateY(-15px) rotate(0.5deg);
+  }
+}
+
+@keyframes gentle-sway {
+  0%, 100% {
+    transform: translateX(0px) scale(1);
+  }
+  50% {
+    transform: translateX(5px) scale(1.05);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes heart-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+}
+
+@keyframes gift-bounce {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+/* Animation Classes */
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-gentle-sway {
+    animation: gentle-sway 8s ease-in-out infinite;
+  }
+  
+  .animate-sparkle {
+    animation: sparkle 3s ease-in-out infinite;
+  }
+  
+  .animate-heart-pulse {
+    animation: heart-pulse 4s ease-in-out infinite;
+  }
+  
+  .animate-gift-bounce {
+    animation: gift-bounce 5s ease-in-out infinite;
+  }
+  
+  .animate-delay-1 {
+    animation-delay: 1s;
+  }
+  
+  .animate-delay-2 {
+    animation-delay: 2s;
+  }
+  
+  .animate-delay-3 {
+    animation-delay: 3s;
+  }
+  
+  .animate-delay-4 {
+    animation-delay: 4s;
+  }
+}
+
+/* Background Decorative Elements */
+.bg-decorated {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-decorated::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 30%, hsl(var(--lime) / 0.15) 0%, transparent 25%),
+    radial-gradient(circle at 80% 20%, hsl(var(--bubblegum) / 0.1) 0%, transparent 30%),
+    radial-gradient(circle at 40% 80%, hsl(var(--turquoise) / 0.1) 0%, transparent 25%),
+    radial-gradient(circle at 90% 70%, hsl(var(--tangerine) / 0.08) 0%, transparent 20%),
+    radial-gradient(circle at 10% 90%, hsl(var(--purple) / 0.12) 0%, transparent 30%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bg-decorated > * {
+  position: relative;
+  z-index: 1;
+}

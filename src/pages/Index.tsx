@@ -63,9 +63,9 @@ const Index = () => {
             Join thousands of donors who are spreading joy and hope to children in need
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="text-center bg-card/90 backdrop-blur-sm border-turquoise/30 shadow-lg hover:shadow-xl transition-all hover:scale-105">
+            <Card className="text-center bg-card/90 backdrop-blur-sm border-turquoise/30 shadow-lg hover:shadow-xl transition-all hover:scale-105 group">
               <CardHeader>
-                <Package className="h-12 w-12 mx-auto text-turquoise mb-4" />
+                <Package className="h-12 w-12 mx-auto text-turquoise mb-4 group-hover:animate-gentle-sway" />
                 <CardTitle className="text-purple">Easy Donations</CardTitle>
               </CardHeader>
               <CardContent>
@@ -75,9 +75,9 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center bg-card/90 backdrop-blur-sm border-bubblegum/30 shadow-lg hover:shadow-xl transition-all hover:scale-105">
+            <Card className="text-center bg-card/90 backdrop-blur-sm border-bubblegum/30 shadow-lg hover:shadow-xl transition-all hover:scale-105 group">
               <CardHeader>
-                <MapPin className="h-12 w-12 mx-auto text-bubblegum mb-4" />
+                <MapPin className="h-12 w-12 mx-auto text-bubblegum mb-4 group-hover:animate-float" />
                 <CardTitle className="text-purple">Real-time Tracking</CardTitle>
               </CardHeader>
               <CardContent>
@@ -87,9 +87,9 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center bg-card/90 backdrop-blur-sm border-tangerine/30 shadow-lg hover:shadow-xl transition-all hover:scale-105">
+            <Card className="text-center bg-card/90 backdrop-blur-sm border-tangerine/30 shadow-lg hover:shadow-xl transition-all hover:scale-105 group">
               <CardHeader>
-                <Heart className="h-12 w-12 mx-auto text-tangerine mb-4" />
+                <Heart className="h-12 w-12 mx-auto text-tangerine mb-4 group-hover:animate-heart-pulse" />
                 <CardTitle className="text-purple">Direct Impact</CardTitle>
               </CardHeader>
               <CardContent>
@@ -99,9 +99,9 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center bg-card/90 backdrop-blur-sm border-purple/30 shadow-lg hover:shadow-xl transition-all hover:scale-105">
+            <Card className="text-center bg-card/90 backdrop-blur-sm border-purple/30 shadow-lg hover:shadow-xl transition-all hover:scale-105 group">
               <CardHeader>
-                <Users className="h-12 w-12 mx-auto text-purple mb-4" />
+                <Users className="h-12 w-12 mx-auto text-purple mb-4 group-hover:animate-sparkle" />
                 <CardTitle className="text-purple">Community Network</CardTitle>
               </CardHeader>
               <CardContent>
